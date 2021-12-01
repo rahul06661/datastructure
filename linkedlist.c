@@ -22,7 +22,7 @@ void main()
 {
   int data;
 
-  struct node *node1,*node2,*node3,*node4;
+  struct node *node1,*node2,*node3,*node4,*node5;
   node1=malloc(sizeof(struct node*));
   node2=malloc(sizeof(struct node*));
   node3=malloc(sizeof(struct node*));
@@ -39,6 +39,13 @@ void main()
   node4->next=NULL;
 
   start=node1;
+
+  node5=malloc(sizeof(struct node*));
+
+  node5->data=100;
+  node5->next=node1;
+  start=node5;
+
 
   printLinkedlist(start);
 
