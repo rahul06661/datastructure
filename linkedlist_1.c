@@ -9,6 +9,21 @@ struct node
 
 struct node* start;
 
+
+void insertpos(int data,int pos)
+{
+    struct node* node1;
+    node1=malloc(sizeof(struct node*));
+    temp=start
+    for(int i=0;i<pos;i++)
+    {
+        temp=temp->next
+
+    }
+    node->next=temp;
+
+
+}
 void insert(int data)
     {
         struct node* node1;
@@ -18,23 +33,25 @@ void insert(int data)
             start=node1;
             node1->data=data;
             node1->next=NULL;
-            printf("vljsnvlkjsvfnskd");
+            printf("\nFirst Node created");
+
         }
         else
         {
             node1->data=data;
             node1->next=start;
             start=node1;
-            printf("###################################");
+            printf("\nNode created");
+
         }
-    printf("Node created");
+
     }
 
 void display(struct node* p)
 {
      while(p!=NULL)
     {
-    printf("%d \t",p->data);
+    printf("%d \n",p->data);
     p=p->next;
     }
 }
@@ -44,7 +61,7 @@ void main()
     int data;
     printf("\n enter data");
     scanf("%d",&data);
-    insert(10);
+    insert(data);
     insert(101);
     insert(102);
     insert(104);
